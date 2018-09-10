@@ -17,6 +17,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
+    contents: 'Init.txt'
     targetFolder: $(Build.ArtifactStagingDirectory)
   
 - task: PublishBuildArtifacts@1
