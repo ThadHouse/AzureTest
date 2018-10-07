@@ -20,7 +20,7 @@ steps:
 
     dir %ANT_HOME%\\bin
 
-    LINK -h
+    LINK /link
 
     echo HelloAgain
 
