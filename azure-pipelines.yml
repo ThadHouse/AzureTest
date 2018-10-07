@@ -18,6 +18,10 @@ steps:
 
     echo %ANT_HOME%
 
+    set PATH=%PATH%;%ANT_HOME%\\bin
+
+    echo %PATH%
+
     dir %ANT_HOME%\\bin
 
     LINK /link
