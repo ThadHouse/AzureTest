@@ -10,24 +10,10 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: |
-
-    echo beginning
-
-    @call "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\VC\\Auxiliary\\Build\\vcvars64.bat"
-
-    echo %ANT_HOME%
-
-    set PATH=%PATH%;%ANT_HOME%\\bin
-
-    echo %PATH%
-
-    dir %ANT_HOME%\\bin
-
-    LINK /link
-
-    echo HelloAgain
-
+- powershell: |
+    mkdir build
+    $ProgressPreference = 'SilentlyContinue'
+    wget "https://github.com/wpilibsuite/frc-openjdk-windows/releases/download/v11.0.0u28-1/jdk-x86-11.0.0u28-1.zip" -O "build\jdk.zip"
   displayName: 'Run a multi-line script'
 
 - task: CopyFiles@2
