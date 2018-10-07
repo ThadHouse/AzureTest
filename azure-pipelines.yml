@@ -12,8 +12,13 @@ steps:
 
 - script: |
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\VC\\Auxiliary\\Build\\vcvars64.bat"
+
     echo %ANT_HOME%
-    LINK
+
+    LINK -v
+
+    echo HelloAgain
+
   displayName: 'Run a multi-line script'
 
 - task: CopyFiles@2
