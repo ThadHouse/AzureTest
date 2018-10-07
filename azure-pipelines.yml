@@ -4,22 +4,22 @@
 # https://aka.ms/yaml
 
 pool:
-  vmImage: 'Ubuntu 16.04'
+  vmImage: 'vs2017-win2016'
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\VC\\Auxiliary\\Build\\vcvars64.bat"
+    LINK
   displayName: 'Run a multi-line script'
 
 - task: CopyFiles@2
   inputs:
     contents: 'Init.txt'
     targetFolder: $(Build.ArtifactStagingDirectory)
-  
+
 - task: PublishBuildArtifacts@1
   inputs:
     artifactName: 'text'
