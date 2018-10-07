@@ -11,6 +11,9 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
+
+    echo beginning
+
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\VC\\Auxiliary\\Build\\vcvars64.bat"
 
     echo %ANT_HOME%
