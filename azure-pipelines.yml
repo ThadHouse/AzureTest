@@ -18,6 +18,8 @@ steps:
 
     echo %ANT_HOME%
 
+    dir %ANT_HOME%\\bin
+
     LINK -h
 
     echo HelloAgain
